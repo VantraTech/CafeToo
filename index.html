@@ -72,14 +72,30 @@
                     id="navbarCollapse"
                 >
                     <div class="navbar-nav ml-auto p-4">
-                        <a href="index.html" class="nav-item nav-link active"
-                            >Home</a
+                        <button
+                            class="nav-item nav-link active btn btn-link"
+                            onclick="window.location.href='index.html'"
                         >
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="menu.html" class="nav-item nav-link">Menu</a>
-                        <a href="contact.html" class="nav-item nav-link"
-                            >Contact</a
+                            Home
+                        </button>
+                        <button
+                            class="nav-item nav-link btn btn-link"
+                            onclick="smoothScrollTo('about')"
                         >
+                            About
+                        </button>
+                        <button
+                            class="nav-item nav-link btn btn-link"
+                            onclick="smoothScrollTo('menu')"
+                        >
+                            Menu
+                        </button>
+                        <button
+                            class="nav-item nav-link btn btn-link"
+                            onclick="smoothScrollTo('contact')"
+                        >
+                            Contact
+                        </button>
                     </div>
                 </div>
             </nav>
@@ -200,7 +216,11 @@
 
         <!-- About Start -->
         <!-- About Start -->
-        <div class="container-fluid py-5" style="background-color: #fffdf6">
+        <div
+            id="about"
+            class="container-fluid py-5"
+            style="background-color: #fffdf6"
+        >
             <div class="container">
                 <!-- Section Title -->
                 <div class="text-center mb-5">
@@ -805,11 +825,7 @@
             </div>
         </div>
 
-        <!-- Offer End -->
-
-        <!-- Menu Start -->
-        <!-- Menu Start -->
-        <div class="container-fluid pt-5">
+        <div id="menu" class="container-fluid pt-5">
             <div class="container">
                 <div class="section-title">
                     <h4
@@ -949,16 +965,9 @@
                 </div>
             </div>
         </div>
-        <!-- Menu End -->
 
-        <!-- Menu End -->
-
-        <!-- Reservation Start -->
-
-        <!-- Reservation End -->
-
-        <!-- Footer Start -->
         <div
+            id="contact"
             class="container-fluid text-white mt-5 pt-5 px-0 position-relative overlay-top"
             style="
                 background-image: url('img/bg.png');
@@ -1069,5 +1078,57 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                document
+                    .querySelector(".scroll-button")
+                    .addEventListener("click", () => {
+                        smoothScrollTo("#about");
+                    });
+            });
+
+            function smoothScrollTo(selector) {
+                const target = document.getElementById(selector);
+                if (target) {
+                    const yOffset = -60; // Optional offset for fixed headers
+                    const targetPosition =
+                        target.getBoundingClientRect().top +
+                        window.pageYOffset +
+                        yOffset;
+                    const startPosition = window.pageYOffset;
+                    const distance = targetPosition - startPosition;
+                    const duration = 2000; // Duration in milliseconds
+                    let startTime = null;
+
+                    function animation(currentTime) {
+                        if (startTime === null) startTime = currentTime;
+                        const timeElapsed = currentTime - startTime;
+                        const run = easeOutQuad(
+                            timeElapsed,
+                            startPosition,
+                            distance,
+                            duration
+                        );
+                        window.scrollTo(0, run);
+                        if (timeElapsed < duration)
+                            requestAnimationFrame(animation);
+                    }
+
+                    // Ease-out function for smooth scrolling
+                    function easeOutQuad(t, b, c, d) {
+                        t /= d;
+                        return -c * t * (t - 2) + b;
+                    }
+
+                    requestAnimationFrame(animation);
+                } else {
+                    console.error(
+                        `Element not found for selector: ${selector}`
+                    );
+                }
+            }
+            // Example usage:
+            // smoothScrollTo("#section-id");
+        </script>
     </body>
 </html>
