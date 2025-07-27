@@ -1,0 +1,5 @@
+# robots.txt for Cafe Too website
+User-agent: *
+Allow: /
+
+Sitemap: https://www.cafetoo.in/sitemap.xml
