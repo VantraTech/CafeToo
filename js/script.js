@@ -18,6 +18,7 @@ class CafeTooMenu {
         this.addOptimizedHoverEffects();
         this.addKeyboardNavigation();
         this.addPrintFunctionality();
+        this.addViewPaperMenuButton();
         this.handleResize();
     }
 
@@ -115,7 +116,39 @@ class CafeTooMenu {
             }
         });
     }
+    addViewPaperMenuButton() {
+        const viewMenuButton = document.createElement("button");
+        viewMenuButton.innerHTML = "📄 View Paper Menu";
+        viewMenuButton.style.cssText = `
+            position: fixed;
+            bottom: 60px; /* Adjusted to avoid overlap with the print button */
+            right: 20px;
+            background: #8B4513;
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: background-color 0.2s ease;
+            z-index: 1000;
+        `;
 
+        viewMenuButton.addEventListener("mouseenter", () => {
+            viewMenuButton.style.background = "#A0522D";
+        });
+
+        viewMenuButton.addEventListener("mouseleave", () => {
+            viewMenuButton.style.background = "#8B4513";
+        });
+
+        viewMenuButton.addEventListener("click", () => {
+            window.open("./img/menu/CafeTooMenuDigital.png", "_blank");
+        });
+
+        document.body.appendChild(viewMenuButton);
+    }
     // Optimized print functionality
     addPrintFunctionality() {
         const printButton = document.createElement("button");
