@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Café Too - Gallery | Explore Our Cafe & Dishes</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <meta
+            name="keywords"
+            content="Cafe Too gallery, cafe photos, food pictures, ambiance, Kolkata cafe images, student cafe gallery, best cafe design"
+        />
+        <meta
+            name="description"
+            content="Browse the gallery of Café Too! See our cozy ambiance, delicious dishes, and happy customers in Kolkata."
+        />
+        <meta name="robots" content="index, follow" />
+
+        <link href="img/favicon.ico" rel="icon" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+            rel="stylesheet"
+        />
+
+        <link
+            href="lib/owlcarousel/assets/owl.carousel.min.css"
+            rel="stylesheet"
+        />
+        <link
+            href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+            rel="stylesheet"
+        />
+
+        <link href="css/style.min.css" rel="stylesheet" />
+
+        <style>
+            /* Custom styles for gallery items */
+            .gallery-item {
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease-in-out;
+                background-color: #fff; /* Ensures a white background for carousel items */
+                padding: 10px; /* Padding inside carousel item to give some space around image */
+            }
+
+            .gallery-item:hover {
+                transform: translateY(-5px);
+            }
+
+            .gallery-item img {
+                width: 100%;
+                height: 200px; /* Fixed height for carousel images */
+                object-fit: cover;
+                border-radius: 4px; /* Slightly less rounded corners for the image itself */
+            }
+
+            /* Styles for the varied-size grid images */
+            .photo-grid-item {
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease-in-out;
+                background-color: #fff;
+                padding: 10px;
+                height: 100%; /* Ensure container fills its column height */
+            }
+
+            .photo-grid-item:hover {
+                transform: translateY(-5px);
+            }
+
+            .photo-grid-item img {
+                width: 100%;
+                height: 100%; /* Image fills its container */
+                object-fit: cover;
+                border-radius: 4px;
+            }
+
+            /* Specific height adjustments for grid image containers, override general rules if needed */
+            .photo-grid-item.h-350 {
+                height: 350px;
+            }
+            .photo-grid-item.h-300 {
+                height: 300px;
+            }
+
+            /* Ensure images within the owl carousel are styled consistently */
+            .owl-carousel .owl-item img {
+                display: block;
+                width: 100%;
+                height: 200px; /* Consistent height for carousel images */
+                object-fit: cover;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container-fluid p-0 nav-bar">
+            <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
+                <a href="index.html" class="navbar-brand px-lg-4 m-0">
+                    <div>
+                        <span
+                            style="
+                                color: #fce5a3;
+                                font-family: 'Lobster', cursive;
+                                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                            "
+                            >Café</span
+                        >
+                        <span
+                            style="
+                                color: #f3431e;
+                                font-family: 'Lobster', cursive;
+                                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                            "
+                            >Too</span
+                        >
+                    </div>
+                </a>
+                <button
+                    type="button"
+                    class="navbar-toggler"
+                    data-toggle="collapse"
+                    data-target="#navbarCollapse"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                    class="collapse navbar-collapse justify-content-between"
+                    id="navbarCollapse"
+                >
+                    <div class="navbar-nav ml-auto p-4">
+                        <a
+                            href="index.html"
+                            class="nav-item nav-link btn btn-link"
+                            >Home</a
+                        >
+                        <a
+                            href="index.html#about"
+                            class="nav-item nav-link btn btn-link"
+                            >About</a
+                        >
+                        <a
+                            href="index.html#menu"
+                            class="nav-item nav-link btn btn-link"
+                            >Menu</a
+                        >
+                        <a
+                            href="gallery.html"
+                            class="nav-item nav-link btn btn-link"
+                            >Gallery</a
+                        >
+                        <a
+                            href="index.html#contact"
+                            class="nav-item nav-link btn btn-link"
+                            >Contact</a
+                        >
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div
+            class="container-fluid page-header mb-5 position-relative overlay-bottom"
+            style="
+                background-image: url('img/wall_background.webp');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                backdrop-filter: blur(4px);
+            "
+        >
+            <div
+                class="d-flex flex-column align-items-center justify-content-center pt-0 pt-lg-5"
+                style="min-height: 400px"
+            >
+                <h1
+                    class="display-4 mb-3 mt-0 mt-lg-5 text-white text-uppercase"
+                >
+                    Gallery
+                </h1>
+                <div class="d-inline-flex mb-lg-5">
+                    <p class="m-0 text-white">
+                        <a class="text-white" href="index.html">Home</a>
+                    </p>
+                    <p class="m-0 text-white px-2">/</p>
+                    <p class="m-0 text-white">Gallery</p>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="container-fluid py-5">
+            <div class="container">
+                <div class="section-title">
+                    <h4
+                        class="text-primary text-uppercase"
+                        style="letter-spacing: 5px"
+                    >
+                        Animated Showcase
+                    </h4>
+                    <h1 class="display-4">Highlights from Café Too</h1>
+                </div>
+                <div class="owl-carousel gallery-carousel">
+                    <div class="gallery-item">
+                        <img
+                            src="img/carousel/carousel1.png"
+                            alt="Cozy interior of Cafe Too with comfortable seating"
+                        />
+                    </div>
+                    <div class="gallery-item">
+                        <img
+                            src="img/fried-fries.webp"
+                            alt="Crispy Golden French Fries"
+                        />
+                    </div>
+                    <div class="gallery-item">
+                        <img
+                            src="img/blue.jpeg"
+                            alt="Refreshing Blue Lagoon Drink"
+                        />
+                    </div>
+                    <div class="gallery-item">
+                        <img
+                            src="img/sandwich.jpeg"
+                            alt="Fresh Veg Sandwiches"
+                        />
+                    </div>
+                    <div class="gallery-item">
+                        <img
+                            src="img/maggi.webp"
+                            alt="Delicious Maggi Noodles with Fried Egg"
+                        />
+                    </div>
+                    <div class="gallery-item">
+                        <img
+                            src="img/burger.jpeg"
+                            alt="Gourmet Burger with Fries"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="container-fluid pt-5">
+            <div class="container">
+                <div class="section-title">
+                    <h4
+                        class="text-primary text-uppercase"
+                        style="letter-spacing: 5px"
+                    >
+                        Photo Grid
+                    </h4>
+                    <h1 class="display-4">Moments Captured at Our Cafe</h1>
+                </div>
+                <div class="row pb-3">
+                    <div class="col-lg-6 col-md-6 mb-4">
+                        <div class="photo-grid-item h-350">
+                            <img
+                                src="img/gallery/newHappy.jpg"
+                                alt="Happy customers enjoying food at Cafe Too"
+                            />
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="photo-grid-item h-350">
+                            <img
+                                src="img/gallery/1000059874.jpg"
+                                alt="Crispy Chicken Nuggets in a Basket"
+                            />
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="photo-grid-item h-350">
+                            <img
+                                src="img/gallery/DSC_4255.JPG"
+                                alt="Air Conditioned Rooms at Cafe Too"
+                            />
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="photo-grid-item h-300">
+                            <img
+                                src="img/gallery/DSC_4268.JPG"
+                                alt="Delicious and Hygienic Food served at Cafe Too"
+                            />
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="photo-grid-item h-300">
+                            <img
+                                src="img/gallery/DSC_4179.JPG"
+                                alt="Family-Friendly ambiance at Cafe Too"
+                            />
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="photo-grid-item h-300">
+                            <img
+                                src="img/gallery/DSC_4162.JPG"
+                                alt="Free WiFi and TV access at Cafe Too"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            id="contact"
+            class="container-fluid text-white mt-5 pt-5 px-0 position-relative overlay-top"
+            style="
+                background-image: url('img/wall_background.webp');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                backdrop-filter: blur(4px);
+            "
+        >
+            <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
+                <!-- Contact Info -->
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <h4
+                        class="text-uppercase mb-4"
+                        style="
+                            letter-spacing: 2px;
+                            color: #ffc107;
+                            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                        "
+                    >
+                        Get In Touch
+                    </h4>
+                    <p
+                        style="
+                            font-size: 16px;
+                            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                        "
+                    >
+                        <i class="fa fa-map-marker-alt mr-2"></i>
+                        Jay Ambey Apartment,<br />
+                        146 Dhalua Main Road,<br />
+                        Kolkata - 700152
+                    </p>
+                    <p
+                        style="
+                            font-size: 16px;
+                            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                        "
+                    >
+                        <i class="fa fa-phone-alt mr-2"></i>+91 91430 03365
+                    </p>
+                    <p
+                        style="
+                            font-size: 16px;
+                            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                        "
+                    >
+                        <i class="fa fa-clock mr-2"></i>
+                        <strong>Open:</strong> 10:00 AM – 11:00 PM<br />
+                        <span style="margin-left: 24px"
+                            >(Monday to Saturday)</span
+                        >
+                    </p>
+                </div>
+
+                <!-- Google Maps Embed -->
+                <div class="col-lg-8 col-md-6 mb-5">
+                    <h4
+                        class="text-uppercase mb-4"
+                        style="
+                            letter-spacing: 2px;
+                            color: #ffc107;
+                            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                        "
+                    >
+                        Find Us On Google Maps
+                    </h4>
+                    <div style="border-radius: 8px; overflow: hidden">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4382.840764180236!2d88.41086777587779!3d22.475247136530246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027311ac499c2d%3A0x352e51ae4f8a9d69!2sJay%20Ambey%20Apartments!5e1!3m2!1sen!2sin!4v1753610949530!5m2!1sen!2sin"
+                            width="100%"
+                            height="300"
+                            style="border: none; width: 100%; height: 300px"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5"
+                style="border-color: rgba(256, 256, 256, 0.1) !important"
+            >
+                <p class="mb-2 text-white">
+                    Copyright &copy;
+                    <a class="font-weight-bold" href="https://www.cafetoo.in"
+                        >Cafe Too</a
+                    >. All Rights Reserved.
+                </p>
+                <p class="m-0 text-white">
+                    Designed by
+                    <a class="font-weight-bold" href="https://www.vantra.tech"
+                        >Vantra</a
+                    >
+                </p>
+            </div>
+        </div>
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+            ><i class="fa fa-angle-double-up"></i
+        ></a>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/tempusdominus/js/moment.min.js"></script>
+        <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <script src="js/main.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                // Ensure smooth scrolling also works for direct hash links
+                document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+                    anchor.addEventListener("click", function (e) {
+                        e.preventDefault();
+                        const targetId = this.getAttribute("href").substring(1);
+                        smoothScrollTo(targetId);
+                    });
+                });
+
+                // Initialize gallery carousel
+                $(".gallery-carousel").owlCarousel({
+                    autoplay: true,
+                    smartSpeed: 1000,
+                    margin: 20,
+                    dots: true,
+                    loop: true,
+                    center: true,
+                    responsive: {
+                        0: {
+                            items: 1,
+                        },
+                        576: {
+                            items: 2,
+                        },
+                        768: {
+                            items: 3,
+                        },
+                        992: {
+                            items: 4,
+                        },
+                    },
+                });
+            });
+
+            function smoothScrollTo(id) {
+                const target = document.getElementById(id);
+                if (target) {
+                    const yOffset = -60; // Optional offset for fixed headers
+                    const targetPosition =
+                        target.getBoundingClientRect().top +
+                        window.pageYOffset +
+                        yOffset;
+                    const startPosition = window.pageYOffset;
+                    const distance = targetPosition - startPosition;
+                    const duration = 2000; // Duration in milliseconds
+                    let startTime = null;
+
+                    function animation(currentTime) {
+                        if (startTime === null) startTime = currentTime;
+                        const timeElapsed = currentTime - startTime;
+                        const run = easeOutQuad(
+                            timeElapsed,
+                            startPosition,
+                            distance,
+                            duration
+                        );
+                        window.scrollTo(0, run);
+                        if (timeElapsed < duration) {
+                            requestAnimationFrame(animation);
+                        } else {
+                            // Update URL hash after scroll completes
+                            history.pushState(null, null, `#${id}`);
+                        }
+                    }
+
+                    // Ease-out function for smooth scrolling
+                    function easeOutQuad(t, b, c, d) {
+                        t /= d;
+                        return -c * t * (t - 2) + b;
+                    }
+
+                    requestAnimationFrame(animation);
+                } else {
+                    console.error(`Element not found for ID: ${id}`);
+                }
+            }
+        </script>
+    </body>
+</html>

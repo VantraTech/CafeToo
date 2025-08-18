@@ -25,5 +25,17 @@
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>https://www.cafetoo.in/gallery.html</loc>
+        <lastmod>2025-07-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.cafetoo.in/menu.html</loc>
+        <lastmod>2025-07-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
     <!-- Add more URLs for any other distinct pages if your site expands -->
 </urlset>
