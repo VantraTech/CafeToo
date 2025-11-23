@@ -1,489 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Café Too - Digital Menu</title>
-        <link rel="stylesheet" href="./css/menu.css" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap"
-            rel="stylesheet"
-        />
-        <!-- SEO Meta -->
-        <meta
-            name="description"
-            content="Explore Café Too's digital menu - shakes, tea, pasta, pizza, quick bites & combos. Freshly brewed with love in Kolkata."
-        />
-        <meta
-            name="keywords"
-            content="Cafe Too menu, Kolkata cafe, shakes, pasta, pizza, coffee, quick bites, Kolkata food"
-        />
-        <meta name="author" content="Café Too" />
 
-        <!-- Open Graph -->
-        <meta property="og:title" content="Café Too - Digital Menu" />
-        <meta
-            property="og:description"
-            content="Delicious shakes, pasta, pizza & more at Café Too. Freshly brewed with love."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.cafetoo.in/menu.html" />
-        <meta
-            property="og:image"
-            content="https://cafetoo.in/img/menu/CafeTooMenuDigital.png"
-        />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Café Too - Digital Menu</title>
+    <link rel="stylesheet" href="./css/menu.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <!-- SEO Meta -->
+    <meta name="description"
+        content="Explore Café Too's digital menu - shakes, tea, pasta, pizza, quick bites & combos. Freshly brewed with love in Kolkata." />
+    <meta name="keywords"
+        content="Cafe Too menu, Kolkata cafe, shakes, pasta, pizza, coffee, quick bites, Kolkata food" />
+    <meta name="author" content="Café Too" />
 
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Café Too - Digital Menu" />
-        <meta
-            name="twitter:description"
-            content="Drinks, tea, pasta, pizza, quick bites & more."
-        />
-        <meta
-            name="twitter:image"
-            content="https://cafetoo.in/img/menu/CafeTooMenuDigital.png"
-        />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Café Too - Digital Menu" />
+    <meta property="og:description"
+        content="Delicious shakes, pasta, pizza & more at Café Too. Freshly brewed with love." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.cafetoo.in/menu.html" />
+    <meta property="og:image" content="https://cafetoo.in/img/menu/CafeTooMenuDigital.png" />
 
-        <!-- Fonts -->
-        <link
-            href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    <body>
-        <div class="menu-container">
-            <!-- Background Elements -->
-            <div class="bg-pattern"></div>
-            <div class="coffee-beans"></div>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Café Too - Digital Menu" />
+    <meta name="twitter:description" content="Drinks, tea, pasta, pizza, quick bites & more." />
+    <meta name="twitter:image" content="https://cafetoo.in/img/menu/CafeTooMenuDigital.png" />
 
-            <!-- Header -->
-            <header class="header">
-                <div class="header-decoration left">
-                    <div class="coffee-cup">☕</div>
-                    <div class="steam">💨</div>
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div class="menu-container">
+        <!-- Background Elements -->
+        <div class="bg-pattern"></div>
+        <div class="coffee-beans"></div>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="header-decoration left">
+                <div class="coffee-cup">☕</div>
+                <div class="steam">💨</div>
+            </div>
+            <h1 class="logo">
+                <span class="cafe">Café</span><span class="too">Too</span>
+            </h1>
+            <div class="header-decoration right">
+                <div class="coffee-bean">🫘</div>
+                <div class="croissant">🥐</div>
+            </div>
+            <h2 class="menu-title">Menu</h2>
+            <p class="website">
+                <a href="index.html" target="_blank" rel="noopener">www.cafetoo.in</a>
+            </p>
+
+            <style>
+                .website a {
+                    text-decoration: none;
+                    /* removes underline */
+                    color: orange;
+                    /* orange text */
+                    font-weight: 600;
+                    /* bold for visibility */
+                    cursor: pointer;
+                    /* looks clickable */
+                    transition: color 0.3s ease;
+                    /* smooth hover effect */
+                    display: inline-flex;
+                    /* align text with icon */
+                    align-items: center;
+                }
+
+                .website a::after {
+                    content: "🔗";
+                    /* link icon */
+                    margin-left: 6px;
+                    /* spacing between text & icon */
+                    font-size: 0.9em;
+                }
+
+                .website a:hover,
+                .website a:focus {
+                    color: darkorange;
+                    /* darker shade on hover */
+                    text-decoration: underline;
+                    /* underline only on hover */
+                }
+            </style>
+        </header>
+
+        <!-- Menu Sections -->
+        <main class="menu-grid" id="menuGrid">
+            <!-- Drinks Section -->
+            <section class="menu-section" data-category="drinks">
+                <div class="section-header">
+                    <div class="section-icon">☕</div>
+                    <h3 class="section-title">Drinks</h3>
                 </div>
-                <h1 class="logo">
-                    <span class="cafe">Café</span><span class="too">Too</span>
-                </h1>
-                <div class="header-decoration right">
-                    <div class="coffee-bean">🫘</div>
-                    <div class="croissant">🥐</div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-icon">🥛</div>
+                        <span class="item-name">Lassi</span>
+                        <span class="dots"></span>
+                        <span class="price">₹40 <small>/ ₹60</small></span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🥭</div>
+                        <span class="item-name">Mango Lassi</span>
+                        <span class="dots"></span>
+                        <span class="price">₹50 <small>/ ₹65</small></span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🥤</div>
+                        <span class="item-name">Chaas</span>
+                        <span class="dots"></span>
+                        <span class="price">₹35</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🍫</div>
+                        <span class="item-name">Brownie Shake</span>
+                        <span class="dots"></span>
+                        <span class="price">₹70 <small>/ ₹90</small></span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🥭</div>
+                        <span class="item-name">Mango Shake</span>
+                        <span class="dots"></span>
+                        <span class="price">₹60 <small>/ ₹80</small></span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🍌</div>
+                        <span class="item-name">Banana Shake</span>
+                        <span class="dots"></span>
+                        <span class="price">₹50 <small>/ ₹70</small></span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🍫</div>
+                        <span class="item-name">Kit Kat Shake</span>
+                        <span class="dots"></span>
+                        <span class="price">₹70 <small>/ ₹90</small></span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🍪</div>
+                        <span class="item-name">Oreo Shake</span>
+                        <span class="dots"></span>
+                        <span class="price">₹70 <small>/ ₹90</small></span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🍍</div>
+                        <span class="item-name">Pineapple Shake</span>
+                        <span class="dots"></span>
+                        <span class="price">₹50 <small>/ ₹80</small></span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🍓</div>
+                        <span class="item-name">Strawberry Shake</span>
+                        <span class="dots"></span>
+                        <span class="price">₹50 <small>/ ₹80</small></span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🌊</div>
+                        <span class="item-name">Blue Lagoon</span>
+                        <span class="dots"></span>
+                        <span class="price">₹50 <small>/ ₹80</small></span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🍋</div>
+                        <span class="item-name">Fresh Lime Soda</span>
+                        <span class="dots"></span>
+                        <span class="price">₹50 <small>/ ₹70</small></span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🧊</div>
+                        <span class="item-name">Cold Coffee</span>
+                        <span class="dots"></span>
+                        <span class="price">₹60 <small>/ ₹80</small></span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🌿</div>
+                        <span class="item-name">Virgin Mojito</span>
+                        <span class="dots"></span>
+                        <span class="price">₹50 <small>/ ₹80</small></span>
+                    </div>
                 </div>
-                <h2 class="menu-title">Menu</h2>
-                <p class="website">
-                    <a href="index.html" target="_blank" rel="noopener"
-                        >www.cafetoo.in</a
-                    >
-                </p>
+            </section>
 
-                <style>
-                    .website a {
-                        text-decoration: none; /* removes underline */
-                        color: orange; /* orange text */
-                        font-weight: 600; /* bold for visibility */
-                        cursor: pointer; /* looks clickable */
-                        transition: color 0.3s ease; /* smooth hover effect */
-                        display: inline-flex; /* align text with icon */
-                        align-items: center;
-                    }
+            <!-- Tea Section -->
+            <section class="menu-section" data-category="tea">
+                <div class="section-header">
+                    <div class="section-icon">🍵</div>
+                    <h3 class="section-title">Tea</h3>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-icon">🥛</div>
+                        <span class="item-name">Milk Tea</span>
+                        <span class="dots"></span>
+                        <span class="price">₹10 <small>/ ₹10</small></span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🖤</div>
+                        <span class="item-name">Black Tea</span>
+                        <span class="dots"></span>
+                        <span class="price">₹10</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🍃</div>
+                        <span class="item-name">Green Tea</span>
+                        <span class="dots"></span>
+                        <span class="price">₹20</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🍫</div>
+                        <span class="item-name">Chocolate Tea</span>
+                        <span class="dots"></span>
+                        <span class="price">₹20</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">☕</div>
+                        <span class="item-name">Coffee</span>
+                        <span class="dots"></span>
+                        <span class="price">₹20 <small>/ ₹40</small></span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">⚫</div>
+                        <span class="item-name">Black Coffee</span>
+                        <span class="dots"></span>
+                        <span class="price">₹20</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🍫</div>
+                        <span class="item-name">Chocolate Coffee</span>
+                        <span class="dots"></span>
+                        <span class="price">₹30</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🔥</div>
+                        <span class="item-name">Hot Chocolate</span>
+                        <span class="dots"></span>
+                        <span class="price">₹70</span>
+                    </div>
+                </div>
+            </section>
 
-                    .website a::after {
-                        content: "🔗"; /* link icon */
-                        margin-left: 6px; /* spacing between text & icon */
-                        font-size: 0.9em;
-                    }
+            <!-- Pasta Section -->
+            <section class="menu-section" data-category="pasta">
+                <div class="section-header">
+                    <div class="section-icon">🍝</div>
+                    <h3 class="section-title">Pasta</h3>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-icon">🥬</div>
+                        <span class="item-name">Veg White Sauce Pasta</span>
+                        <span class="dots"></span>
+                        <span class="price">₹80</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🍗</div>
+                        <span class="item-name">Chicken White Sauce Pasta</span>
+                        <span class="dots"></span>
+                        <span class="price">₹100</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🥬</div>
+                        <span class="item-name">Veg Mix Sauce Pasta</span>
+                        <span class="dots"></span>
+                        <span class="price">₹90</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🍗</div>
+                        <span class="item-name">Chicken Mix Sauce Pasta</span>
+                        <span class="dots"></span>
+                        <span class="price">₹110</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🌶️</div>
+                        <span class="item-name">Veg Masala Pasta</span>
+                        <span class="dots"></span>
+                        <span class="price">₹80</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🌶️</div>
+                        <span class="item-name">Chicken Masala Pasta</span>
+                        <span class="dots"></span>
+                        <span class="price">₹100</span>
+                    </div>
+                </div>
+            </section>
 
-                    .website a:hover,
-                    .website a:focus {
-                        color: darkorange; /* darker shade on hover */
-                        text-decoration: underline; /* underline only on hover */
-                    }
-                </style>
-            </header>
+            <!-- Pizza Section -->
+            <section class="menu-section" data-category="pizza">
+                <div class="section-header">
+                    <div class="section-icon">🍕</div>
+                    <h3 class="section-title">Pizza</h3>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-icon">🍅</div>
+                        <span class="item-name">Margherita</span>
+                        <span class="dots"></span>
+                        <span class="price">₹100</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🥬</div>
+                        <span class="item-name">Veg</span>
+                        <span class="dots"></span>
+                        <span class="price">₹120</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🍗</div>
+                        <span class="item-name">Chicken</span>
+                        <span class="dots"></span>
+                        <span class="price">₹150</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🧀</div>
+                        <span class="item-name">Extra Cheese</span>
+                        <span class="dots"></span>
+                        <span class="price">₹30</span>
+                    </div>
+                </div>
+            </section>
 
-            <!-- Menu Sections -->
-            <main class="menu-grid" id="menuGrid">
-                <!-- Drinks Section -->
-                <section class="menu-section" data-category="drinks">
-                    <div class="section-header">
-                        <div class="section-icon">☕</div>
-                        <h3 class="section-title">Drinks</h3>
+            <!-- Quick Bites Section -->
+            <section class="menu-section" data-category="quick-bites">
+                <div class="section-header">
+                    <div class="section-icon">🍟</div>
+                    <h3 class="section-title">Quick Bites</h3>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-icon">🍗</div>
+                        <span class="item-name">Chicken Nuggets</span>
+                        <span class="dots"></span>
+                        <span class="price">₹60</span>
                     </div>
-                    <div class="menu-items">
-                        <div class="menu-item">
-                            <div class="item-icon">🥛</div>
-                            <span class="item-name">Lassi</span>
-                            <span class="dots"></span>
-                            <span class="price">₹40 <small>/ ₹60</small></span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🥭</div>
-                            <span class="item-name">Mango Lassi</span>
-                            <span class="dots"></span>
-                            <span class="price">₹50 <small>/ ₹65</small></span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🥤</div>
-                            <span class="item-name">Chaas</span>
-                            <span class="dots"></span>
-                            <span class="price">₹35</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🍫</div>
-                            <span class="item-name">Brownie Shake</span>
-                            <span class="dots"></span>
-                            <span class="price">₹70 <small>/ ₹90</small></span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🥭</div>
-                            <span class="item-name">Mango Shake</span>
-                            <span class="dots"></span>
-                            <span class="price">₹60 <small>/ ₹80</small></span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🍌</div>
-                            <span class="item-name">Banana Shake</span>
-                            <span class="dots"></span>
-                            <span class="price">₹50 <small>/ ₹70</small></span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🍫</div>
-                            <span class="item-name">Kit Kat Shake</span>
-                            <span class="dots"></span>
-                            <span class="price">₹70 <small>/ ₹90</small></span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🍪</div>
-                            <span class="item-name">Oreo Shake</span>
-                            <span class="dots"></span>
-                            <span class="price">₹70 <small>/ ₹90</small></span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🍍</div>
-                            <span class="item-name">Pineapple Shake</span>
-                            <span class="dots"></span>
-                            <span class="price">₹50 <small>/ ₹80</small></span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🍓</div>
-                            <span class="item-name">Strawberry Shake</span>
-                            <span class="dots"></span>
-                            <span class="price">₹50 <small>/ ₹80</small></span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🌊</div>
-                            <span class="item-name">Blue Lagoon</span>
-                            <span class="dots"></span>
-                            <span class="price">₹50 <small>/ ₹80</small></span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🍋</div>
-                            <span class="item-name">Fresh Lime Soda</span>
-                            <span class="dots"></span>
-                            <span class="price">₹50 <small>/ ₹70</small></span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🧊</div>
-                            <span class="item-name">Cold Coffee</span>
-                            <span class="dots"></span>
-                            <span class="price">₹60 <small>/ ₹80</small></span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🌿</div>
-                            <span class="item-name">Virgin Mojito</span>
-                            <span class="dots"></span>
-                            <span class="price">₹50 <small>/ ₹80</small></span>
-                        </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🥬</div>
+                        <span class="item-name">Veg Nuggets</span>
+                        <span class="dots"></span>
+                        <span class="price">₹60</span>
                     </div>
-                </section>
+                    <div class="menu-item">
+                        <div class="item-icon">🍜</div>
+                        <span class="item-name">Maggi Veg</span>
+                        <span class="dots"></span>
+                        <span class="price">₹50</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🥚</div>
+                        <span class="item-name">Maggi Egg</span>
+                        <span class="dots"></span>
+                        <span class="price">₹60</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🍗</div>
+                        <span class="item-name">Maggi Chicken</span>
+                        <span class="dots"></span>
+                        <span class="price">₹70</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🍲</div>
+                        <span class="item-name">Maggi Mix</span>
+                        <span class="dots"></span>
+                        <span class="price">₹80</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🥪</div>
+                        <span class="item-name">Veg Sandwich</span>
+                        <span class="dots"></span>
+                        <span class="price">₹60</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🥪</div>
+                        <span class="item-name">Chicken Sandwich</span>
+                        <span class="dots"></span>
+                        <span class="price">₹80</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🍔</div>
+                        <span class="item-name">Veg Burger</span>
+                        <span class="dots"></span>
+                        <span class="price">₹80</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🍔</div>
+                        <span class="item-name">Chicken Burger</span>
+                        <span class="dots"></span>
+                        <span class="price">₹100</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🍟</div>
+                        <span class="item-name">French Fries</span>
+                        <span class="dots"></span>
+                        <span class="price">₹60</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🥟</div>
+                        <span class="item-name">Veg Spring Roll</span>
+                        <span class="dots"></span>
+                        <span class="price">₹40</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🥟</div>
+                        <span class="item-name">Chicken Spring Roll</span>
+                        <span class="dots"></span>
+                        <span class="price">₹48</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🍳</div>
+                        <span class="item-name">Bread Omlet</span>
+                        <span class="dots"></span>
+                        <span class="price">₹50</span>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🧈</div>
+                        <span class="item-name">Bread Butter</span>
+                        <span class="dots"></span>
+                        <span class="price">₹70</span>
+                    </div>
+                </div>
+            </section>
 
-                <!-- Tea Section -->
-                <section class="menu-section" data-category="tea">
-                    <div class="section-header">
-                        <div class="section-icon">🍵</div>
-                        <h3 class="section-title">Tea</h3>
+            <!-- Combo Section -->
+            <section class="menu-section" data-category="combo">
+                <div class="section-header">
+                    <div class="section-icon">🍱</div>
+                    <h3 class="section-title">Combo</h3>
+                </div>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <div class="item-icon">🍚</div>
+                        <span class="item-name">Veg Fried Rice + Chilli Chicken</span>
+                        <span class="dots"></span>
+                        <span class="price">₹100</span>
                     </div>
-                    <div class="menu-items">
-                        <div class="menu-item">
-                            <div class="item-icon">🥛</div>
-                            <span class="item-name">Milk Tea</span>
-                            <span class="dots"></span>
-                            <span class="price">₹10 <small>/ ₹10</small></span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🖤</div>
-                            <span class="item-name">Black Tea</span>
-                            <span class="dots"></span>
-                            <span class="price">₹10</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🍃</div>
-                            <span class="item-name">Green Tea</span>
-                            <span class="dots"></span>
-                            <span class="price">₹20</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🍫</div>
-                            <span class="item-name">Chocolate Tea</span>
-                            <span class="dots"></span>
-                            <span class="price">₹20</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">☕</div>
-                            <span class="item-name">Coffee</span>
-                            <span class="dots"></span>
-                            <span class="price">₹20 <small>/ ₹40</small></span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">⚫</div>
-                            <span class="item-name">Black Coffee</span>
-                            <span class="dots"></span>
-                            <span class="price">₹20</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🍫</div>
-                            <span class="item-name">Chocolate Coffee</span>
-                            <span class="dots"></span>
-                            <span class="price">₹30</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🔥</div>
-                            <span class="item-name">Hot Chocolate</span>
-                            <span class="dots"></span>
-                            <span class="price">₹70</span>
-                        </div>
+                    <div class="menu-item">
+                        <div class="item-icon">🍚</div>
+                        <span class="item-name">Veg Fried Rice + Chilli Paneer</span>
+                        <span class="dots"></span>
+                        <span class="price">₹120</span>
                     </div>
-                </section>
+                    <div class="menu-item">
+                        <div class="item-icon">🌶️</div>
+                        <span class="item-name">Chilli Chicken/Chilli Paneer</span>
+                        <span class="dots"></span>
+                        <span class="price">₹80</span>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-                <!-- Pasta Section -->
-                <section class="menu-section" data-category="pasta">
-                    <div class="section-header">
-                        <div class="section-icon">🍝</div>
-                        <h3 class="section-title">Pasta</h3>
-                    </div>
-                    <div class="menu-items">
-                        <div class="menu-item">
-                            <div class="item-icon">🥬</div>
-                            <span class="item-name">Veg White Sauce Pasta</span>
-                            <span class="dots"></span>
-                            <span class="price">₹60</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🍗</div>
-                            <span class="item-name"
-                                >Chicken White Sauce Pasta</span
-                            >
-                            <span class="dots"></span>
-                            <span class="price">₹80</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🥬</div>
-                            <span class="item-name">Veg Mix Sauce Pasta</span>
-                            <span class="dots"></span>
-                            <span class="price">₹70</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🍗</div>
-                            <span class="item-name"
-                                >Chicken Mix Sauce Pasta</span
-                            >
-                            <span class="dots"></span>
-                            <span class="price">₹90</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🌶️</div>
-                            <span class="item-name">Veg Masala Pasta</span>
-                            <span class="dots"></span>
-                            <span class="price">₹60</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🌶️</div>
-                            <span class="item-name">Chicken Masala Pasta</span>
-                            <span class="dots"></span>
-                            <span class="price">₹80</span>
-                        </div>
-                    </div>
-                </section>
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="footer-text">
+                Visit us at <strong>www.cafetoo.in</strong>
+            </p>
+            <p class="footer-tagline">Freshly brewed with love ☕</p>
+        </footer>
+    </div>
 
-                <!-- Pizza Section -->
-                <section class="menu-section" data-category="pizza">
-                    <div class="section-header">
-                        <div class="section-icon">🍕</div>
-                        <h3 class="section-title">Pizza</h3>
-                    </div>
-                    <div class="menu-items">
-                        <div class="menu-item">
-                            <div class="item-icon">🍅</div>
-                            <span class="item-name">Margherita</span>
-                            <span class="dots"></span>
-                            <span class="price">₹100</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🥬</div>
-                            <span class="item-name">Veg</span>
-                            <span class="dots"></span>
-                            <span class="price">₹120</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🍗</div>
-                            <span class="item-name">Chicken</span>
-                            <span class="dots"></span>
-                            <span class="price">₹150</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🧀</div>
-                            <span class="item-name">Extra Cheese</span>
-                            <span class="dots"></span>
-                            <span class="price">₹30</span>
-                        </div>
-                    </div>
-                </section>
+    <script src="./js/script.js"></script>
+</body>
 
-                <!-- Quick Bites Section -->
-                <section class="menu-section" data-category="quick-bites">
-                    <div class="section-header">
-                        <div class="section-icon">🍟</div>
-                        <h3 class="section-title">Quick Bites</h3>
-                    </div>
-                    <div class="menu-items">
-                        <div class="menu-item">
-                            <div class="item-icon">🍗</div>
-                            <span class="item-name">Chicken Nuggets</span>
-                            <span class="dots"></span>
-                            <span class="price">₹60</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🥬</div>
-                            <span class="item-name">Veg Nuggets</span>
-                            <span class="dots"></span>
-                            <span class="price">₹60</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🍜</div>
-                            <span class="item-name">Maggi Veg</span>
-                            <span class="dots"></span>
-                            <span class="price">₹50</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🥚</div>
-                            <span class="item-name">Maggi Egg</span>
-                            <span class="dots"></span>
-                            <span class="price">₹60</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🍗</div>
-                            <span class="item-name">Maggi Chicken</span>
-                            <span class="dots"></span>
-                            <span class="price">₹70</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🍲</div>
-                            <span class="item-name">Maggi Mix</span>
-                            <span class="dots"></span>
-                            <span class="price">₹80</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🥪</div>
-                            <span class="item-name">Veg Sandwich</span>
-                            <span class="dots"></span>
-                            <span class="price">₹60</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🥪</div>
-                            <span class="item-name">Chicken Sandwich</span>
-                            <span class="dots"></span>
-                            <span class="price">₹80</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🍔</div>
-                            <span class="item-name">Veg Burger</span>
-                            <span class="dots"></span>
-                            <span class="price">₹80</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🍔</div>
-                            <span class="item-name">Chicken Burger</span>
-                            <span class="dots"></span>
-                            <span class="price">₹100</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🍟</div>
-                            <span class="item-name">French Fries</span>
-                            <span class="dots"></span>
-                            <span class="price">₹60</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🥟</div>
-                            <span class="item-name">Veg Spring Roll</span>
-                            <span class="dots"></span>
-                            <span class="price">₹40</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🥟</div>
-                            <span class="item-name">Chicken Spring Roll</span>
-                            <span class="dots"></span>
-                            <span class="price">₹48</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🍳</div>
-                            <span class="item-name">Bread Omlet</span>
-                            <span class="dots"></span>
-                            <span class="price">₹50</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🧈</div>
-                            <span class="item-name">Bread Butter</span>
-                            <span class="dots"></span>
-                            <span class="price">₹70</span>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Combo Section -->
-                <section class="menu-section" data-category="combo">
-                    <div class="section-header">
-                        <div class="section-icon">🍱</div>
-                        <h3 class="section-title">Combo</h3>
-                    </div>
-                    <div class="menu-items">
-                        <div class="menu-item">
-                            <div class="item-icon">🍚</div>
-                            <span class="item-name"
-                                >Veg Fried Rice + Chilli Chicken</span
-                            >
-                            <span class="dots"></span>
-                            <span class="price">₹100</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🍚</div>
-                            <span class="item-name"
-                                >Veg Fried Rice + Chilli Paneer</span
-                            >
-                            <span class="dots"></span>
-                            <span class="price">₹120</span>
-                        </div>
-                        <div class="menu-item">
-                            <div class="item-icon">🌶️</div>
-                            <span class="item-name"
-                                >Chilli Chicken/Chilli Paneer</span
-                            >
-                            <span class="dots"></span>
-                            <span class="price">₹80</span>
-                        </div>
-                    </div>
-                </section>
-            </main>
-
-            <!-- Footer -->
-            <footer class="footer">
-                <p class="footer-text">
-                    Visit us at <strong>www.cafetoo.in</strong>
-                </p>
-                <p class="footer-tagline">Freshly brewed with love ☕</p>
-            </footer>
-        </div>
-
-        <script src="./js/script.js"></script>
-    </body>
 </html>
